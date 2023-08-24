@@ -18,7 +18,7 @@ export default function UploadButton() {
         onUpload={(result: UploadResult) => {
           setTimeout(() => router.refresh(), 1000);
         }}
-        uploadPreset="ml_default"
+        uploadPreset="kvl91pgo"
       >
         <div className="flex gap-2 items-center">
           <UploadIcon />
