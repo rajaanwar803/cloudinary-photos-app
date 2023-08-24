@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export function Gallery(props: ComponentProps<"div">) {
+export function GalleryIcon(props: ComponentProps<"div">) {
   return (
     <div {...props}>
       <svg

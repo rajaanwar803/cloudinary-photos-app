@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 
-export function Album(props: ComponentProps<"div">) {
+export function AlbumIcon(props: ComponentProps<"div">) {
   return (
     <div {...props}>
       <svg

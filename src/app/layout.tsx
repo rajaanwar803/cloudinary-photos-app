@@ -2,12 +2,11 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Heart } from "@/components/icons/heart";
-import { Album } from "@/components/icons/album";
-import { Gallery } from "@/components/icons/gallery";
+import { AlbumIcon } from "@/components/icons/album";
+import { GalleryIcon } from "@/components/icons/gallery";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,7 +31,7 @@ function SideMenu() {
               className="w-full justify-start flex gap-2"
             >
               <Link href={"/gallery"}>
-                <Gallery />
+                <GalleryIcon />
                 Gallery
               </Link>
             </Button>
@@ -42,7 +41,7 @@ function SideMenu() {
               className="w-full justify-start flex gap-2"
             >
               <Link href={"/albums"}>
-                <Album />
+                <AlbumIcon />
                 Albums
               </Link>
             </Button>
