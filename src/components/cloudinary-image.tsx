@@ -2,10 +2,11 @@
 
 import { Heart } from "@/components/icons/heart";
 import { CldImage, CldImageProps } from "next-cloudinary";
-import { SetAsFavouriteAction } from "./actions";
+import { SetAsFavouriteAction } from "../app/gallery/actions";
 import { useState, useTransition } from "react";
-import { SearchResult } from "./page";
+import { SearchResult } from "../app/gallery/page";
 import { FullHeart } from "@/components/icons/full-heart";
+import { ImageMenu } from "./image-menu";
 
 export function CloudinaryImage(
   props: {
@@ -33,7 +34,7 @@ export function CloudinaryImage(
               SetAsFavouriteAction(imageData.public_id, false);
             });
           }}
-          className="absolute top-2 right-2 hover:text-white text-red-500 cursor-pointer "
+          className="absolute top-2 left-2 hover:text-white text-red-500 cursor-pointer "
         />
       ) : (
         <Heart
@@ -43,9 +44,10 @@ export function CloudinaryImage(
               SetAsFavouriteAction(imageData.public_id, true);
             });
           }}
-          className="absolute top-2 right-2 hover:text-red-500 cursor-pointer "
+          className="absolute top-2 left-2 hover:text-red-500 cursor-pointer "
         />
       )}
+      <ImageMenu />
     </div>
   );
 }
