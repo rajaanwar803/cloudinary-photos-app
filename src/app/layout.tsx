@@ -10,6 +10,8 @@ import { GalleryIcon } from "@/components/icons/gallery";
 import Link from "next/link";
 import cloudinary from "cloudinary";
 import { Folder } from "./albums/page";
+import Image from "next/image";
+import { HeightIcon } from "@radix-ui/react-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,6 +91,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="border-b">
           <div className="flex h-16 items-center px-4 container mx-auto">
+            <Image
+              src="/logo.png"
+              width={"40"}
+              height={"40"}
+              alt="Logo of photo album app"
+            />
             Photos App
             <div className="ml-auto flex items-center space-x-4">
               <Avatar>

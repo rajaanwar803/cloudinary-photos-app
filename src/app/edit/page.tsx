@@ -1,6 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { CldImage } from "next-cloudinary";
 import { useState } from "react";
 
@@ -12,6 +14,9 @@ export default function EditPage({
   const [transformation, setTransformation] = useState<
     undefined | "generative-fill" | "blur" | "grayscale" | "pixelate"
   >();
+
+  const [pendintPrompt, setpendintPrompt] = useState("");
+  const [prompt, setPrompt] = useState("");
   return (
     <section>
       <div className="flex flex-col gap-8">
@@ -22,12 +27,22 @@ export default function EditPage({
           <Button onClick={() => setTransformation(undefined)} variant="ghost">
             Clear All
           </Button>
-          <Button
-            onClick={() => setTransformation("generative-fill")}
-            variant="secondary"
-          >
-            Apply Generative Fill
-          </Button>
+          <div className="flex flex-col gap-4">
+            <Button
+              onClick={() => {
+                setTransformation("generative-fill");
+                setPrompt(pendintPrompt);
+              }}
+              variant="secondary"
+            >
+              Apply Generative Fill
+            </Button>
+            <Label>Prompt</Label>
+            <Input
+              value={pendintPrompt}
+              onChange={(e) => setpendintPrompt(e.currentTarget.value)}
+            />
+          </div>
           <Button onClick={() => setTransformation("blur")} variant="secondary">
             Apply Blur
           </Button>
@@ -49,15 +64,17 @@ export default function EditPage({
           {transformation === "generative-fill" && (
             <CldImage
               src={publicId}
-              width="1200"
+              width="1800"
               height="1400"
               alt="Some Image"
               crop="pad"
-              fillBackground
+              fillBackground={{
+                prompt,
+              }}
             />
           )}
 
-          {transformation === "blur" && (
+          {/* {transformation === "blur" && (
             <CldImage
               src={publicId}
               width="1200"
@@ -82,8 +99,8 @@ export default function EditPage({
               height="1400"
               alt="Some Image"
               pixelate
-            />
-          )}
+            /> */}
+          {/* )} */}
         </div>
       </div>
     </section>

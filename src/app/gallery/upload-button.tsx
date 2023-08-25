@@ -4,7 +4,6 @@ import { CldUploadButton } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import UploadIcon from "@/components/icons/upload";
-import { UploadResult } from "../page";
 
 export default function UploadButton() {
   const router = useRouter();
@@ -15,7 +14,10 @@ export default function UploadButton() {
         //   //   setImageId(result.info.public_id);
         //   router.refresh();
         // }}
-        onUpload={(result: UploadResult) => {
+        // onUpload={(result: UploadResult) => {
+        //   setTimeout(() => router.refresh(), 1000);
+        // }}
+        onUpload={() => {
           setTimeout(() => router.refresh(), 1000);
         }}
         uploadPreset="kvl91pgo"
