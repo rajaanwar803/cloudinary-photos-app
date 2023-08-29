@@ -27,7 +27,7 @@ export default async function GalleryPage({
           <h1 className="text-4xl font-bold">Gallery</h1>
           <UploadButton />
         </div>
-        <SearchForm initialSearch={search}/>
+        <SearchForm initialSearch={search} />
         <GalleryGrid images={results.resources} />
       </div>
     </section>

@@ -14,9 +14,7 @@ export default function UploadButton() {
         //   //   setImageId(result.info.public_id);
         //   router.refresh();
         // }}
-        // onUpload={(result: UploadResult) => {
-        //   setTimeout(() => router.refresh(), 1000);
-        // }}
+
         onUpload={() => {
           setTimeout(() => router.refresh(), 1000);
         }}
