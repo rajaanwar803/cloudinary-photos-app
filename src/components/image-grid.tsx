@@ -1,4 +1,3 @@
-import { SearchResult } from "@/app/gallery/page";
 import { ReactNode } from "react";
 
 const MAX_COLUMNS = 4;

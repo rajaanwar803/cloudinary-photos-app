@@ -3,11 +3,6 @@ import cloudinary from "cloudinary";
 import GalleryGrid from "./gallery-grid";
 import { SearchForm } from "./search-form";
 
-export type SearchResult = {
-  public_id: string;
-  tags: string[];
-};
-
 export default async function GalleryPage({
   searchParams: { search },
 }: {

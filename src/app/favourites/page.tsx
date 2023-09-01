@@ -2,11 +2,6 @@ import cloudinary from "cloudinary";
 import { ForceRefresh } from "@/components/force-refresh";
 import FavouritesList from "./favourites-list";
 
-export type SearchResult = {
-  public_id: string;
-  tags: string[];
-};
-
 export default async function FavouritesPage() {
   const results = (await cloudinary.v2.search
     .expression("resource_type:image AND tags=favourite")

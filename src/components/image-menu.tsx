@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MenuIcon } from "./icons/menu";
 import { AddToAlbumDialog } from "./add-to-album-dialog";
-import { SearchResult } from "@/app/gallery/page";
 import { useState } from "react";
 import Link from "next/link";
 import { Pencil } from "lucide-react";

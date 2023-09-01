@@ -5,7 +5,6 @@ import { AlbumIcon } from "@/components/icons/album";
 import { GalleryIcon } from "@/components/icons/gallery";
 import Link from "next/link";
 import cloudinary from "cloudinary";
-import { Folder } from "@/app/albums/page";
 
 export default async function SideMenu() {
   const { folders } = (await cloudinary.v2.api.root_folders()) as {

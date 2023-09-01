@@ -4,11 +4,6 @@ import { ImageGrid } from "@/components/image-grid";
 import { CloudinaryImage } from "@/components/cloudinary-image";
 import { useEffect, useState } from "react";
 
-export type SearchResult = {
-  public_id: string;
-  tags: string[];
-};
-
 export default function FavouritesList({
   initialResources,
 }: {

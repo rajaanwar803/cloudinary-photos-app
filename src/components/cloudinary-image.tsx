@@ -4,7 +4,6 @@ import { Heart } from "@/components/icons/heart";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { SetAsFavouriteAction } from "../app/gallery/actions";
 import { useState, useTransition } from "react";
-import { SearchResult } from "../app/gallery/page";
 import { FullHeart } from "@/components/icons/full-heart";
 import { ImageMenu } from "./image-menu";
 

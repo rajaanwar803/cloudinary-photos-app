@@ -5,12 +5,7 @@ import { Button } from "./ui/button";
 import UploadIcon from "./icons/upload";
 import { useState } from "react";
 
-export type UploadResult = {
-  info: {
-    public_id: string;
-  };
-  event: "success";
-};
+
 
 export default function MainPageView() {
   const [imageId, setImageId] = useState("zgtc0rd9jteaoim5ni7a");
